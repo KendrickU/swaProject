@@ -40,7 +40,7 @@ Suppose that the bank then instantiates a policy that Certbot and similar utilit
 
 So the attack then begins the process of submitting a code contribution to Certbot’s github source. He craftily manages to include malicious code this way, that goes unnoticed by Certbot’s code-review authority. Now, the whomever installs certbot from source will unknowingly install malware. The changes of this happening are slim, and it is almost certain that Certbot’s wide user-base will alert the github maintainers of the issue. As such, Cerbot then mandates more stringent code reviews following this incident. Additionally, all new code submissions are now run through VirusTotal, to screen for known malicious payloads. The attacker now has to devise another method of attack to compromise a user attempting to install Certbot.
 
-**Registering an account:
+## Registering an account:
 
 ### Use case:
 
@@ -65,7 +65,7 @@ An attacker has successfully obtained the credentials for Certbot’s github acc
 Following this, the bank’s internal email team has launched a company-wide email campaign which alerts all employees of high-profile security breaches. Certbot’s large user-base ensures that any security issues inherent to the platform make the top of the list, and all Certbot-related activities are suspended at the bank until an official statement from Certbot is released in response to the issue, as well as any mitigations against future attacks that have been put in place.
 
 ---2---
-*Using the Certificate
+## Using the Certificate
 
 ### Use Case:
 
@@ -115,7 +115,7 @@ The attacker learns that the bank it talking to CA server. The attacker listen t
 Using a new shared secret key every time would prevent the an outside user from making the disgruntled user look like the CA server.
 
 ---3--- Han
-Checking Expiration on Certificates
+## Checking Expiration on Certificates
 
 One of Certbot’s main uses includes automatically or manually checking if a certificate has expired, and the relevant steps necessary . We have identified various potential misuse cases in response to this functionality:
 
