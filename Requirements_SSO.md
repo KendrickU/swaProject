@@ -13,7 +13,7 @@ Certbot can be installed either from Linux repositories (Windows installation re
 
 ***Installing from Linux repositories:
 
-# Use case:
+### Use case:
 
 A user would typically install Certbot by following installation instructions at https://certbot.eff.org/ . After specifying a web server and operating system, they would be presented with instructions to add remote repositories, which allow for the requisite certbot release to be pulled upon the next sudo apt-get update. From here on in, certbot will attempt to modify the web server configuration files and start the certificate generation process, as well as asking the user for email addresses for the purposes of creating an account with LetsEncrypt.
 
