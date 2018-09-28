@@ -1,7 +1,7 @@
 ### Requirements for Software Security Engineering
 # Five data flows:
 -----
-Use and misuse cases detailed in this document are inspired from a hypothetical scenario in which Certbot is used to secure a bank’s web services, both internal and outwards-facing. Five of Certbot’s most pertinent functionalities will be detailed below with respect to this scenario:
+Use and misuse cases detailed in this document are inspired from a hypothetical scenario in which Certbot is used to secure a bank’s web services, from within an internal network as well as on outwards-facing machines. Five of Certbot’s most pertinent functionalities will be detailed below with respect to this scenario:
 
 ---1---
 
@@ -9,13 +9,13 @@ Use and misuse cases detailed in this document are inspired from a hypothetical 
 
 **Installing certbot:
 
-Certbot can be installed either from Linux repositories (Windows installation requires installing Bash for Ubuntu from the Microsoft store first), or from a Github source. Both of these avenues are susceptible to attack:
+Certbot can be installed either from Linux repositories (Windows installation requires installing Bash for Ubuntu from the Microsoft store first, but still requires the same repositories), or from a Github source. Both of these avenues may be susceptible to attack from a well-funded and/or motivated adversaries. 
 
 ***Installing from Linux repositories:
 
-### Use case:
+ ### Use case:
 
-A user would typically install Certbot by following installation instructions at https://certbot.eff.org/ . After specifying a web server and operating system, they would be presented with instructions to add remote repositories, which allow for the requisite certbot release to be pulled upon the next sudo apt-get update. From here on in, certbot will attempt to modify the web server configuration files and start the certificate generation process, as well as asking the user for email addresses for the purposes of creating an account with LetsEncrypt.
+A user would typically install Certbot by following installation instructions at https://certbot.eff.org/ . After specifying a web server and operating system, they would be presented with instructions to add remote repositories, which allow for the requisite certbot release to be pulled upon the next sudo apt-get update. From here on in, certbot will attempt to modify the web server configuration files and start the certificate generation process, as well as asking the user for email addresses for the purposes of creating an account with Let’s Encrypt. 
 
 ### Misuse case:
 
@@ -29,7 +29,7 @@ Alternatively, a user may opt to install Certbot from the official Github source
 
 ### Misuse case:
 
-In the same vein as the previous misuse case, a rushed and/or inexperienced system administrator in our bank may stumble upon Joe Blogg’s Certbot Installation Blog, which instead urges to him to instead clone “https://github.com/certibot/certbot.git”, which supplies a slightly modified version of Certbot complete with a Python-formatted Meterpreter shell in byte format, called at the top of a Certbot installation class. He has installed malware onto his system and he is none the wiser.
+In the same vein as the previous misuse case, a rushed and/or inexperienced system administrator in our bank may stumble upon Joe Blogg’s Certbot Installation Blog, which instead urges to him to clone “https://github.com/certibot/certbot.git”, which supplies a slightly modified version of Certbot complete with a Python-formatted Meterpreter shell in byte format, called at the top of a Certbot installation class. He has installed malware onto his system and he is none the wiser. 
 
 ### Mitigation:
 
@@ -38,9 +38,10 @@ Suppose that the bank then instantiates a policy that Certbot and similar utilit
 
 ### Counter mitigation:
 
-So the attack then begins the process of submitting a code contribution to Certbot’s github source. He craftily manages to include malicious code this way, that goes unnoticed by Certbot’s code-review authority. Now, the whomever installs certbot from source will unknowingly install malware. The changes of this happening are slim, and it is almost certain that Certbot’s wide user-base will alert the github maintainers of the issue. As such, Cerbot then mandates more stringent code reviews following this incident. Additionally, all new code submissions are now run through VirusTotal, to screen for known malicious payloads. The attacker now has to devise another method of attack to compromise a user attempting to install Certbot.
+So the attack then begins the process of submitting a code contribution to Certbot’s github source. He craftily manages to include malicious code this way, that goes unnoticed by Certbot’s code-review authority. Now, whomever installs certbot from source will unknowingly install malware. The changes of this happening are slim, and it is almost certain that Certbot’s wide user-base will alert the github maintainers of the issue. As such, Cerbot then mandates more stringent code reviews following this incident. Additionally, all new code submissions are now run through VirusTotal, to screen for known malicious payloads. The attacker now has to devise another method of attack to compromise a user attempting to install Certbot. 
 
-## Registering an account:
+**Registering an account:
+
 
 ### Use case:
 
@@ -50,22 +51,22 @@ cat config.cfg | certbot-auto certonly --standalone --email
 
 ### Misuse case:
 
-The attacker in this case is a disgruntled former co-worker from the system administration team. Neither party paid much attention to company password policies, and as such the former employee has access to the system administrator’s LAN account. He logs into this account, locates config.cfg, and replaces the email address to that of his own. The next time certbot is installed, this email address is used to create a new agreement with Let’s Encrypt, giving the former employee the ability to request certificates for all domains specified in the file at his discretion.
+The attacker in this case is a disgruntled former co-worker from the system administration team. Neither party paid much attention to company password policies, and as such the former employee has access to the system administrator’s LAN account. He logs into this account, locates config.cfg, and replaces the email address to that of his own. The next time certbot is installed, this email address is used to create a new agreement with Let’s Encrypt, giving the former employee the ability to request certificates for all domains specified in the file at his discretion. 
 
 ### Mitigation:
 
-Following this, config.cfg is submitted to the bank’s internal version control software. Any changes made to it are immediately apparent.
+Following this, config.cfg is submitted to the bank’s internal version control software. Any changes made to it are immediately apparent. 
 
 ### Misuse case:
 
-An attacker has successfully obtained the credentials for Certbot’s github account. They now have free reign to modify Certbot’s source code to their liking. All subsequent users that install Certbot from source are affected, including our bank.
+An attacker has successfully obtained the credentials for Certbot’s github account, through fishing or otherwise . They now have free reign to modify Certbot’s source code to their liking. All subsequent users that install Certbot from source are affected, including our bank. 
 
-### Mitigation:
+### Mitigation: 
 
-Following this, the bank’s internal email team has launched a company-wide email campaign which alerts all employees of high-profile security breaches. Certbot’s large user-base ensures that any security issues inherent to the platform make the top of the list, and all Certbot-related activities are suspended at the bank until an official statement from Certbot is released in response to the issue, as well as any mitigations against future attacks that have been put in place.
+Following this, the bank’s internal email team has launched a company-wide email campaign which alerts all employees of high-profile security breaches. Certbot’s large user-base ensures that any security issues inherent to the platform make the top of the list, and all Certbot-related activities are suspended at the bank until an official statement from Certbot is released in response to the issue, as well as any mitigations against future attacks that have been put in place. 
 
----2---
-## Using the Certificate
+---2--- 
+*Using the Certificate 
 
 ### Use Case:
 
@@ -73,7 +74,7 @@ Administrator will need to create a certificate for the bank to show they are in
 
 ### Misuse Case:
 
-An disgruntled user has successfully obtained a certificate from a second hand site that was illegally obtained. With this certificate the disgruntled user can impersonate the
+An disgruntled user has successfully obtained a certificate from a second hand site that was illegally obtained. With this certificate the disgruntled user can impersonate the 
 
 ### Mitigation:
 
@@ -83,7 +84,7 @@ By shortening the window of certificate revocation we the administrator can redu
 
 ### Use Case:
 
-Once the certificate is made and put on the banks servers. It will allow for it to be used to validate itself.
+Once the certificate is made and put on the banks servers. It will allow for it to be used to validate itself. 
 
 ### Misuse Case:
 
@@ -95,10 +96,10 @@ If the bank uses a trusted network this can prevent unwanted guest from being ab
 
 ### Counter Mitigation:
 
-The disgruntled user man in the middle attack has failed because they did not have access to the trusted network. The user now resorts to credential phishing to obtain access to the trusted network. With access to the network they now have the opportunity again to try a man in the middle attack.
+The disgruntled user man in the middle attack has failed because they did not have access to the trusted network. The user now resorts to credential phishing to obtain access to the trusted network. With access to the network they now have the opportunity again to try a man in the middle attack. 
 
 ### Mitigation for Counter Mitigation:
-
+ 
 The bank should take the time to inform and teach its employees to be vigilant for phishing attempts to help protect the banks systems and their assets. With vigilant employee the threat can be lessened for a phishing attempt.
 
 **Grabbing Certificate from CA Server:
@@ -115,7 +116,7 @@ The attacker learns that the bank it talking to CA server. The attacker listen t
 Using a new shared secret key every time would prevent the an outside user from making the disgruntled user look like the CA server.
 
 ---3--- Han
-## Checking Expiration on Certificates
+Checking Expiration on Certificates
 
 One of Certbot’s main uses includes automatically or manually checking if a certificate has expired, and the relevant steps necessary . We have identified various potential misuse cases in response to this functionality:
 
@@ -123,7 +124,7 @@ One of Certbot’s main uses includes automatically or manually checking if a ce
 **Checking for certificate expiration:
 
 ### Use case:
-As stated, this is done either automatically via the “certbot renew” command. Alternatively, it can be done manually with various command line parameters and custom configuration files. Either way, this involves Certbot contacting the DNS server for the domain which the certificate will validate.
+As stated, this is done either automatically via the “certbot renew” command. Alternatively, it can be done manually with various command line parameters and custom configuration files. Either way, this involves Certbot contacting the DNS server for the domain which the certificate will validate. 
 
 ### Misuse case:
 
@@ -131,7 +132,7 @@ As an attacker, DNS offers a multitude of attack vectors. Specific to checking f
 
 ### Mitigation:
 
-Certbot supports the use of DNSSEC for the domains validated by the certificate. This would render the above attack scenario invalid, as even if the attacker compromises a DNS server, would have to present the domain’s public key to  Certbot to successfully identify as the domain in question.
+Certbot supports the use of DNSSEC for the domains validated by the certificate. This would render the above attack scenario invalid, as even if the attacker compromises a DNS server, would have to present the domain’s public key to  Certbot to successfully identify as the domain in question. 
 
 ### Counter mitigation:
 
@@ -139,7 +140,7 @@ A far-fetched but possible way for an attacker to get around DNSSEC would be to 
 
 ### Counter-Counter mitigation:
 
-One way to prevent this scenario from unfolding successfully would be to use OCSP stapling when checking for expired certificates, using the OCSP protocol. The OCSP protocol is specifically designed for use when conversing with CA’s for the purposes of checking certificate statuses. OCSP stapling was designed in part to specifically reduce the effectiveness of SSL vulnerabilities by providing an additional layer of verification during TLS sessions. It amounts to ensuring that a CA-signed timestamp is included during TLS handshakes. This prevents the need for the client to contact the CA directly. Therefore, if the CA is taken over, a valid OCSP response from the real CA would only suffice for revoking certificates.
+One way to prevent this scenario from unfolding successfully would be to use OCSP stapling when checking for expired certificates, using the OCSP protocol. The OCSP protocol is specifically designed for use when conversing with CA’s for the purposes of checking certificate statuses. OCSP stapling was designed in part to specifically reduce the effectiveness of SSL vulnerabilities by providing an additional layer of verification during TLS sessions. It amounts to ensuring that a CA-signed timestamp is included during TLS handshakes. This prevents the need for the client to contact the CA directly. Therefore, if the CA is taken over, a valid OCSP response from the real CA would only suffice for revoking certificates. 
 
 
 
@@ -150,7 +151,7 @@ One way to prevent this scenario from unfolding successfully would be to use OCS
 
 ### Misuse case:
 
-Due to lazy programming, a wildcard is used in a script that uploads files from a directory from a web development project run by the bank. These files are committed to a publicly viewable github account. Due to the wildcard, all files in this directory are committed, including the certificate used by the project. A hacker then stumbles upon this repository, and takes this opportunity to read the domain name supported by the certificate and spin up his own phishing website under the guise of the project.
+Due to lazy programming, a wildcard is used in a script that uploads files from a directory from a web development project run by the bank. These files are committed to a publicly viewable github account. Due to the wildcard, all files in this directory are committed, including the certificate used by the project. A hacker then stumbles upon this repository, and takes this opportunity to read the domain name supported by the certificate and spin up his own phishing website under the guise of the project. 
 
 ### Mitigation/Use case:
 This could be mitigated by manually revoking this certificate through Certbot. It can be done simply with the command “certbot revoke <path-to-certificate>.
@@ -161,9 +162,9 @@ Alternatively, a new certificate can be generated using similar command line par
 
 
 ---4--- Kendrick
- When a certificate is created it is stored on a file system (usually a web server).  This web server then uses this in future communications to it via web traffic.  This local file needs to be protected as any person with this certificate can spoof being the
+ When a certificate is created it is stored on a file system (usually a web server).  This web server then uses this in future communications to it via web traffic.  This local file needs to be protected as any person with this certificate can spoof being the 
 
-*
+* 
 
 
 
@@ -189,13 +190,13 @@ Alternatively, a new certificate can be generated using similar command line par
 
 ### Use Case:
 
-CertBot can check for valid certificates using choice of plugins that CertBot supports. Depending on which plugin is chosen, the automation of checking certificates for validity will be different. In a hypothetical situation, we use Apache Server on CentOs and LetsEncrypt  built into CertBot in a bank setting to check if a certificate has expired and needs to be revoked. This can be done with the following command (Link: https://letsencrypt.org/docs/revoking/):
+CertBot can check for valid certificates using choice of plugins that CertBot supports. Depending on which plugin is chosen, the automation of checking certificates for validity will be different. In a hypothetical situation, we use Apache Server on CentOs and LetsEncrypt  built into CertBot in a bank setting to check if a certificate has expired and needs to be revoked. This can be done with the following command (Link: https://letsencrypt.org/docs/revoking/): 
 
 certbot revoke --cert-path /etc/letsencrypt/archive/${YOUR_DOMAIN}/cert1.pem
 
-This command is used if you originally issued the certificate and you have control of the account that issued it.
+This command is used if you originally issued the certificate and you have control of the account that issued it. 
 
-If you have access to the private key then you can use this command:
+If you have access to the private key then you can use this command: 
 
 certbot revoke --cert-path /PATH/TO/cert.pem --key-path /PATH/TO/key.pem
 
@@ -211,19 +212,19 @@ Further steps can be used to automate the checking validity and revoking of cert
 
 ### Misuse Case:
 
-Our attacker is insider threat in IT named Bob who works for the bank. Bob can threaten to  falsify DNS records in order to make revoking certificates not work by falsifying the DNS records and pointing the DNS to the incorrect domain.
+Our attacker is insider threat in IT named Bob who works for the bank. Bob can threaten to  falsify DNS records in order to make revoking certificates not work by falsifying the DNS records and pointing the DNS to the incorrect domain. 
 
 ### Mitigation:
 
-A mitigation technique can be used to stop Bob from falsifying DNS records. The technique that can be used is every 30 days or so a system administrator that works for the bank could go through and make sure that the DNS server points to the correct domaining which makes sure that everything all the DNS records are correct and the DNS server itself is setup properly.
+A mitigation technique can be used to stop Bob from falsifying DNS records. The technique that can be used is every 30 days or so a system administrator that works for the bank could go through and make sure that the DNS server points to the correct domaining which makes sure that everything all the DNS records are correct and the DNS server itself is setup properly. 
 
 ### Misuse Case:
 
-If falsifying DNS records doesn’t work for Bob then abusing firewall configurations and leaving ports open intentionally so Bob can get in there and change the configuration to stop revoking certificate is the next plan of action. This is usually done by messing with the IP tables that are setup.
+If falsifying DNS records doesn’t work for Bob then abusing firewall configurations and leaving ports open intentionally so Bob can get in there and change the configuration to stop revoking certificate is the next plan of action. This is usually done by messing with the IP tables that are setup. 
 
 ### Mitigation:
 
-Bob’s plan of attack can be stopped by manually checking the firewall configurations every 30 days or so which will mitigate the abuse of open ports to allow Bob to stop revocation of certificates.
+Bob’s plan of attack can be stopped by manually checking the firewall configurations every 30 days or so which will mitigate the abuse of open ports to allow Bob to stop revocation of certificates. 
 
 ### Misuse Case:
 
@@ -239,7 +240,7 @@ It is hard to do but if he has trouble making the requesting machine believe tha
 
 ### Mitigation:
 
-Believe it or not but using IPv6 makes it harder for people to know the IP address because it is hashed which then makes it even harder to spoof the MAC address.
+Believe it or not but using IPv6 makes it harder for people to know the IP address because it is hashed which then makes it even harder to spoof the MAC address. 
 
 
 
@@ -302,7 +303,7 @@ This scenario:
 “Company” creates certificate
 Company changes name to “Company International”
 Company International forgets to revoke their old certificate with “Company” identity
-Attacker pulls this old certificate, hosts phishing site with it, people cannot tell the difference between Company and Company International, profit
+Attacker pulls this old certificate, hosts phishing site with it, people cannot tell the difference between Company and Company International, profit 
 
 
 
@@ -311,3 +312,4 @@ Attacker pulls this old certificate, hosts phishing site with it, people cannot 
 Abusing or access control to directories housing files needed for ACME protocol
 
 Admins, Filesystems, certificates, revocation server (cert revoked)
+
