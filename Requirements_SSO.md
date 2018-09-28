@@ -66,7 +66,7 @@ An attacker has successfully obtained the credentials for Certbot’s github acc
 Following this, the bank’s internal email team has launched a company-wide email campaign which alerts all employees of high-profile security breaches. Certbot’s large user-base ensures that any security issues inherent to the platform make the top of the list, and all Certbot-related activities are suspended at the bank until an official statement from Certbot is released in response to the issue, as well as any mitigations against future attacks that have been put in place. 
 
 ---2--- 
-## Using the Certificate 
+## Creating the Certificate 
 
 ### Use Case:
 
@@ -162,6 +162,9 @@ Alternatively, a new certificate can be generated using similar command line par
 
 
 ---4--- Kendrick
+
+## Write Certificate to the Filesystem
+
  When a certificate is created it is stored on a file system (usually a web server).  This web server then uses this in future communications to it via web traffic.  This local file needs to be protected as any person with this certificate can spoof being the 
 
 * 
