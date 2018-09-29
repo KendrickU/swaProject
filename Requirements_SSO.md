@@ -3,13 +3,13 @@
 -----
 Use and misuse cases detailed in this document are inspired from a hypothetical scenario in which Certbot is used to secure a bank’s web services, from within an internal network as well as on outwards-facing machines. Five of Certbot’s most pertinent functionalities will be detailed below with respect to this scenario:
 
----1---
+-----
 
 ## Installation and creating account:
 
 ![Diagram 1](https://www.lucidchart.com/publicSegments/view/70f5c6b6-ec1c-4749-8bbc-5eb3dcb00fa4/image.png)
 
-### Installing certbot:
+### Installing Certbot:
 
 Certbot can be installed either from Linux repositories (Windows installation requires installing Bash for Ubuntu from the Microsoft store first, but still requires the same repositories), or from a Github source. Both of these avenues may be susceptible to attack from well-funded and/or motivated adversaries. 
 
@@ -40,10 +40,9 @@ Suppose that the bank then instantiates a policy that Certbot and similar utilit
 
 #### Counter mitigation:
 
-So the attack then begins the process of submitting a code contribution to Certbot’s github source. He craftily manages to include malicious code this way, that goes unnoticed by Certbot’s code-review authority. Now, whomever installs certbot from source will unknowingly install malware. The changes of this happening are slim, and it is almost certain that Certbot’s wide user-base will alert the github maintainers of the issue. As such, Cerbot then mandates more stringent code reviews following this incident. Additionally, all new code submissions are now run through VirusTotal, to screen for known malicious payloads. The attacker now has to devise another method of attack to compromise a user attempting to install Certbot. 
+So the attack then begins the process of submitting a code contribution to Certbot’s Github source. He craftily manages to include malicious code this way, that goes unnoticed by Certbot’s code-review authority. Now, whomever installs certbot from source will unknowingly install malware. The changes of this happening are slim, and it is almost certain that Certbot’s wide user-base will alert the github maintainers of the issue. As such, Cerbot then mandates more stringent code reviews following this incident. Additionally, all new code submissions are now run through VirusTotal, to screen for known malicious payloads. The attacker now has to devise another method of attack to compromise a user attempting to install Certbot. 
 
 ### Registering an account:
-
 
 #### Use case:
 
@@ -61,13 +60,14 @@ Following this, config.cfg is submitted to the bank’s internal version control
 
 ### Misuse case:
 
-An attacker has successfully obtained the credentials for Certbot’s github account, through phishing or otherwise . They now have free reign to modify Certbot’s source code to their liking. All subsequent users that install Certbot from source are affected, including our bank. 
+An attacker has successfully obtained the credentials for Certbot’s Github account, through phishing or otherwise . They now have free reign to modify Certbot’s source code to their liking. All subsequent users that install Certbot from source are affected, including our bank. 
 
 #### Mitigation: 
 
 Following this, the bank’s internal email team has launched a company-wide email campaign which alerts all employees of high-profile security breaches. Certbot’s large user-base ensures that any security issues inherent to the platform make the top of the list, and all Certbot-related activities are suspended at the bank until an official statement from Certbot is released in response to the issue, as well as any mitigations against future attacks that have been put in place. 
 
----2--- 
+-----
+
 ## Creating the Certificate 
 ![Diagram 2](https://www.lucidchart.com/publicSegments/view/13ae8a98-2e72-4ca2-997b-19b134863c79/image.png)
 
@@ -118,7 +118,8 @@ The attacker learns that the bank it talking to CA server. The attacker listen t
 
 Using a new shared secret key every time would prevent the an outside user from making the disgruntled user look like the CA server.
 
----3--- 
+-----
+
 ## Checking Expiration on Certificates
 
 ![Diagram 3](https://www.lucidchart.com/publicSegments/view/7075d0a6-54c0-4976-a110-d28f5b62c867/image.png)
@@ -158,7 +159,8 @@ This could be mitigated by manually revoking this certificate through Certbot. I
 
 Alternatively, a new certificate can be generated using similar command line parameters. This would similarly mitigate the above misuse case
 
----4--- 
+-----
+
 ## Writing Certificates to the Filesystem & storing them
 ![Diagram 4](https://www.lucidchart.com/publicSegments/view/87f282c3-9d43-44b4-bf0f-97a3d79bacbf/image.png)
 
@@ -195,10 +197,8 @@ Another attacker manages to gain access to a similar web server on the outwards 
 
 Following these breaches, a new standard operating procedure was devised within the Bank. It dictates that certificates need to be hashed on a periodic basis, and checked against previous certificate hashes to ensure that no changes have been made.
 
-  
+-----
 
-
----5--- 
 ## Revoking Certificates
 ![Diagram 5](https://www.lucidchart.com/publicSegments/view/06f5f175-5fe1-4d1a-b615-86de60fa0998/image.png)
 
@@ -256,8 +256,9 @@ It is hard to do but if he has trouble making the requesting machine believe tha
 
 Believe it or not but using IPv6 makes it harder for people to know the IP address because it is hashed which then makes it even harder to spoof the MAC address. 
 
+-----
 
-## OSS Review
+## OSS Security Review
 
 Certbot has a configuration file that allows for some security features such as “rsa-key-size = 4096”.  It also includes some configurations that relate to which email account to use for the registration for automated setup and what type of authenticator to use for this account.  The full range of security related configuration commands are:
 * Rsa-key-size
