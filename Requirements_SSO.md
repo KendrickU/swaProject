@@ -281,3 +281,7 @@ Certbot has a configuration file that allows for some security features such as 
 
 https://certbot.eff.org/docs/using.html#configuration-file
 
+-----
+
+## Project Board Link
+https://github.com/KendrickU/swaProject/projects/3
