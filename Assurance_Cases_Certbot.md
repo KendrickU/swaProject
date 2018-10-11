@@ -24,13 +24,13 @@ installed by accident due to a less than stringent adherence to best installatio
 the source repositories may be compromised through a well-targeted phishing attack against certbot itself (and subsequent changes being made to the source code), or the recipient's specific cerbot download via over the wire manipulation of the source files, possibly through a TLS downgrade attack or ARP spoofing.
 	* C2 refutes R2 in that source code changes are monitored and peer-reviewed. Any malicious changes would be readily apparent, and more than likely corrected before a significant percentage of certbot users are affected
 	* C3 repudiates R3 in that certbot communicates with Let's Encrypt over TLS, greatly increases the complexity of attacks against certbot's ability to obtain certificates fro Let's Encrypt
-		* This would be evident from TLS-secured packet capture on the machine hosting certbot, sending requests to  Let's Encrypt.
-				* however, one undermining point against this evidence would involve somehow bruteforcing or otherwise obtaining cryptographic secrets used during the handshake phase of TLS traffic between cerbot and Let's Encrypt. This could result in a compromised channel of communication, and thus the malicious tampering of certificates from Let's Encrypt
-					* C5 refutes this, as a new shared secret upon every handshake, as defined in RFC 8446 (TLS 1.3, found at https://tools.ietf.org/html/rfc8446), outlines that a new secret would be generated upon every TLS request, thus making the above attack infeasible for any meaningful purpose. 
+	* This would be evident from TLS-secured packet capture on the machine hosting certbot, sending requests to  Let's Encrypt.
+	* however, one undermining point against this evidence would involve somehow bruteforcing or otherwise obtaining cryptographic secrets used during the handshake phase of TLS traffic between cerbot and Let's Encrypt. This could result in a compromised channel of communication, and thus the malicious tampering of certificates from Let's Encrypt
+	* C5 refutes this, as a new shared secret upon every handshake, as defined in RFC 8446 (TLS 1.3, found at https://tools.ietf.org/html/rfc8446), outlines that a new secret would be generated upon every TLS request, thus making the above attack infeasible for any meaningful purpose. 
 
 	* the Inference Rule derived from claim C1 states that if the previously described rebuttals are mitigated, as described and exemplified with relevant evidence, then certbot will reliably be able to obtain certificates.
-			* Unless a 0-day that allows for certbot's correspondence with Let's Encrypt becomes widely known.
-				* Nevertheless, Certbot actively remediates issues as shown on the official github repositories, thus reducing the effectiveness of a powerful 0-day
+	* Unless a 0-day that allows for certbot's correspondence with Let's Encrypt becomes widely known.
+	* Nevertheless, Certbot actively remediates issues as shown on the official github repositories, thus reducing the effectiveness of a powerful 0-day
 
 
 -----------------------------------------------
