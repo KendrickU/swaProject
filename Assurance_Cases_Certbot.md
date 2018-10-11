@@ -14,8 +14,8 @@ Here are two additional claims which do not warrant seperate diagrams
 <br><br>
 ## Certbot resists attacks to subvert the certificate acquisition process 
 -----	
-### The context for these assurance cases is that certbot is being used by a bank to manage their TLS certificates
------
+* The context for these assurance cases is that certbot is being used by a bank to manage their TLS certificates
+
 * Top Claim C1 is deried from a standard use case of certbot. It is designed to securely handle obtaining certificates from the Let's Encrypt certificate authority. 
 * R1 attempts to contradict C1 by proposing that a tampered or malicious version of certbot may have been
 installed by accident due to a less than stringent adherence to best installation practices outlined in the certbot documentation
