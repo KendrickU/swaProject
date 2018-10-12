@@ -1,13 +1,13 @@
 ### Group: 6b87bd7cbe948ef26891defd0258c91d1126beb506ce0da4fc5f6dc7467fb26c
 # Assurance cases
 -----
-Below are five top level assurance claims with accompanying diagrams:
+Below are three top level assurance claims with accompanying diagrams:
 <br><br>
 * Certbot resists attacks to subvert the certificate aquisition process
 * Certbot prevents the unauthorized revocation of certificates
 * Certbot storage mechanism prevents unauthorized disclosure
 <br>
-Here are two additional claims which do not warrant seperate diagrams
+There is an additional claims which does not warrant a seperate diagram
 
 * Certbot resists attacks to subvert certificate renewal processes
 	* this is similar to the claim for obtaining certificates
@@ -34,6 +34,30 @@ the source repositories may be compromised through a well-targeted phishing atta
 
 
 -----------------------------------------------
+<br><br>
+## Certbot prevents the unauthorized revocation of certificates 
+-----	
+
+* Top Claim C1 postulates that Certbot's certificate revocation features prevent the unauthorized revocation of certificates
+
+* This can be rebutted by R1, which asserts that compromised DNS servers could result in Certbot sending revocation requests to a CA which
+impersonates Let's Encrypt, which would in turn disallow the revocation of certificates
+* However, C1 mentions the OCSP protocol used to revoke certificates. The attacker would need to acocunt for altered OCSP responses being accepted by certbot, along with DNS records
+* R2 states that the OCSP protocol is still vulnerable to replay attacks. This is especially possible with DNS-based attacks, as previously accepted OCSP responses from
+Let's Encrypt could be leveraged by an attacker to deny or allow certificate revocation at their command.
+
+	* C2 refutes R2, as OCSP can be extended with OCSP stapling (https://tools.ietf.org/html/rfc6960, page 18-19). This is a security extension to the OCSP protocol that
+	sends CA-signed timestamps with OCSP responses, which are then validated by a third-party OCSP server. This is similar in principal to the Kerberos authentication 		mechanism in that the CA is not contacted directly upon verification of the timestamps, thus mitigating risks associated with a compromised CA for certificate revocation
+
+	* C3 repudiates R2 in a different manner. Instead of a signed timestamp being verified by a third party, a cryptographic nonce is sent
+ 
+	* This would be evident from TLS-secured packet capture on the machine hosting certbot, sending requests to  Let's Encrypt.
+	* however, one undermining point against this evidence would involve somehow bruteforcing or otherwise obtaining cryptographic secrets used during the handshake phase of TLS traffic between cerbot and Let's Encrypt. This could result in a compromised channel of communication, and thus the malicious tampering of certificates from Let's Encrypt
+	* C5 refutes this, as a new shared secret upon every handshake, as defined in RFC 8446 (TLS 1.3, found at https://tools.ietf.org/html/rfc8446), outlines that a new secret would be generated upon every TLS request, thus making the above attack infeasible for any meaningful purpose. 
+
+	* the Inference Rule derived from claim C1 states that if the previously described rebuttals are mitigated, as described and exemplified with relevant evidence, then certbot will reliably be able to obtain certificates.
+	* Unless a 0-day that allows for certbot's correspondence with Let's Encrypt becomes widely known.
+	* Nevertheless, Certbot actively remediates issues as shown on the official github repositories, thus reducing the effectiveness of a powerful 0-day
 
 ## Security Features 
 -----
