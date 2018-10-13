@@ -19,8 +19,9 @@ We have found that Certbot does not have enough features to properly cover 5 ass
 ----
 
 ## Certbot resists attacks to subvert the certificate acquisition process
-
 The context for these assurance cases is that Certbot is being used by a bank to manage their TLS certificates 
+
+!["Diagram 1"](https://www.lucidchart.com/publicSegments/view/e3663a71-90b1-421d-8424-fe667a11c9ff/image.png)
  
 * Top Claim C1 is derived from a standard use case of Certbot. It is designed to securely handle obtaining certificates from the Let's Encrypt certificate authority.  
 * R1 attempts to contradict C1 by proposing that a tampered or malicious version of Certbot may have been 
@@ -30,11 +31,11 @@ installed by accident due to a less than stringent adherence to best installatio
 the source repositories may be compromised through a well-targeted phishing attack against Certbot itself (and subsequent changes being made to the source code), or the recipient's specific Certbot download via over the wire manipulation of the source files, possibly through a TLS downgrade attack or ARP spoofing. 
   * C2 refutes R2 in that source code changes are monitored and peer-reviewed. Any malicious changes would be readily apparent, and more than likely corrected before a significant percentage of Certbot users are affected 
  
-<br>EVIDENCE GOES HERE <br>
+EVIDENCE GOES HERE
  
   * Further evidence lies in the frequently updates issue remediation section on the official Certbot Github repository 
  
-<br>EVIDENCE GOES HERE<br>
+EVIDENCE GOES HERE
  
   * C3 repudiates R3 in that Certbot communicates with Let's Encrypt over TLS, greatly increases the complexity of attacks against Certbot's ability to obtain certificates from Let's Encrypt 
   * This would be evident from TLS-secured packet capture on the machine hosting Certbot, sending requests to  Let's Encrypt. 
@@ -56,7 +57,9 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
  
 ----------------------------------------------- 
 <br><br> 
-## Certbot prevents the unauthorized revocation of certificates    
+## Certbot prevents the unauthorized revocation of certificates
+
+!["Diagram 2"](https://www.lucidchart.com/publicSegments/view/cd5b6e10-743f-49c2-9a7f-f82f65ef04b1/image.png)
  
 * Top Claim C1 postulates that Certbot's certificate storage features prevent the unauthorized revocation of certificates. Certificates are stored  
   * R1 refutes this claim with the suggestion that this certificate storage feature impersonates Let's Encrypt, which would in turn disallow the revocation of certificates 
@@ -98,7 +101,14 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
 -----         
 This assurance case does not have an accompanying diagram. This is because this claim is largely similar to the first outlined assurance case concerning certificate revocation. At Cerbot's core, a certificate can be stored, revoked, obtained, and renewed. The latter two functionalities are largely encompassed in the diagrams and claims shown, and as such the corresponding claims and rebuttals can be applied to them as well.  
 
+!["Diagram 3"](https://www.lucidchart.com/publicSegments/view/1a366405-1600-4faa-a0d6-2e83515bc756/image.png)
+
 ## Github and Kanban 
 ----- 
 https://github.com/KendrickU/swaProject<br> 
 https://github.com/KendrickU/swaProject/projects/4<br> 
+
+
+## Sources
+-----
+https://en.wikiversity.org/wiki/Wireshark/HTTPS
