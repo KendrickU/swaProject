@@ -69,7 +69,7 @@ Gathering the evidence to show that there is TLS-encrypted traffic from Certbot 
   * C3 repudiates R2 in a different manner. Instead of a signed timestamp being verified by a third party, a cryptographic nonce is sent with requests and responses between the OCSP server and Certbot. Because the nonce differs on each request/response, replay attacks are far more difficult to pull off. 
   * Evidence for this comes in the form of the `id-pkix-ocsp-nonce` object included in revocation responses/requests (4.4.1, RFC 6960) 
 
-!["Evidence 2"](https://cdn.discordapp.com/attachments/481986866162302976/500495710362271785/TopClaim2E2.PNG)
+!["Evidence 2"](https://cdn.discordapp.com/attachments/481986866162302976/500499241811312640/unknown.png)
 
 ----------------------------------------------- 
 
