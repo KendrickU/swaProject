@@ -86,7 +86,7 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
   *  R2 shows how lax installation procedures when setting up initial storage locations could result in insecure certificate storage.  
   * However, C2 argues against R2, as the service accounts used to install Certbot should have sufficiently high permissions, as per best practices during Certbot's installation. 
   * R3 goes against C2. In Windows, an unquoted service path containing file or directory names with spaces could result in an attacker abusing filesystem vulnerabilities to compromise certificates. For example, if the icacls utility for Windows lists Certbot's executable as residing at `C:\Program Files\Certbot.exe` instead of `"C:\Program Files\Certbot.exe"`, then an attacker could drop a malicious executable in `C:\Program EvilDirectory\cerbot.exe`. If run with the same permissions as the legit Certbot executable - as would probably be the case if certificate revocation and renewal is done via an automated service, then this exeutable will be able to pull certificates from the "secure" storage location and send them to the attacker, hypothetically. 
-  * Claim C3 argues against this. If proper installation instructions are followed, then Certbot should be installed in the C:\inetpub\ directory, or a similar directory name without spaces in the name. This would prevent unquoted service path attacks using Certbot, even if the path is unquoted. 
+  * Claim C3 argues against this. If proper installation instructions are followed, then Certbot should be installed in the `C:\inetpub\` directory, or a similar directory name without spaces in the name. This would prevent unquoted service path attacks using Certbot, even if the path is unquoted. 
          
 <br>EVIDENCE GOES HERE <br>
          
