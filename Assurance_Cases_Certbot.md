@@ -45,14 +45,11 @@ Gathering the evidence to show that there is TLS-encrypted traffic from Certbot 
   * however, one undermining point against this evidence would involve somehow brute forcing or otherwise obtaining cryptographic secrets used during the handshake phase of TLS traffic between Certbot and Let's Encrypt. This could result in a compromised channel of communication, and thus the malicious tampering of certificates from Let's Encrypt 
   * C5 refutes this, as a new shared secret upon every handshake, as defined in RFC 8446 (TLS 1.3, found at https://tools.ietf.org/html/rfc8446), outlines that a new secret would be generated upon every TLS request, thus making the above attack infeasible for any meaningful purpose.  
  
-<br>EVIDENCE GOES HERE<br>
+!["Evidence 4"](https://cdn.discordapp.com/attachments/481986866162302976/500495699859734528/TopClaim1E4.PNG)
 
   * the Inference Rule derived from claim C1 states that if the previously described rebuttals are mitigated, as described and exemplified with relevant evidence, then Certbot will reliably be able to obtain certificates. 
   * Unless a 0-day that allows for Certbot's correspondence with Let's Encrypt becomes widely known. 
   * Nevertheless, Certbot actively remediates issues as shown on the official Github repositories, thus reducing the effectiveness of a powerful 0-day 
- 
-NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY  
- 
  
 ----------------------------------------------- 
 
@@ -67,12 +64,12 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
   * C2 refutes R2, as OCSP can be extended with OCSP stapling (https://tools.ietf.org/html/rfc6960, page 18-19). This is a security extension to the OCSP protocol that sends CA-signed timestamps with OCSP responses, which are then validated by a third-party OCSP server. This is similar in principal to the Kerberos authentication mechanism in that the CA is not contacted directly upon verification of the timestamps, thus mitigating risks associated with a compromised CA for certificate revocation 
 * Evidence for this would be signed timestamps obtained from OCSP servers 
          
-<br>EVIDENCE GOES HERE<br>
+!["Evidence 1"](https://cdn.discordapp.com/attachments/481986866162302976/500495719229161472/TopClaim2E1.PNG)
  
   * C3 repudiates R2 in a different manner. Instead of a signed timestamp being verified by a third party, a cryptographic nonce is sent with requests and responses between the OCSP server and Certbot. Because the nonce differs on each request/response, replay attacks are far more difficult to pull off. 
   * Evidence for this comes in the form of the `id-pkix-ocsp-nonce` object included in revocation responses/requests (4.4.1, RFC 6960) 
 
-<br>EVIDENCE GOES HERE<br>
+!["Evidence 2"](https://cdn.discordapp.com/attachments/481986866162302976/500495710362271785/TopClaim2E2.PNG)
 
 ----------------------------------------------- 
 
@@ -84,14 +81,14 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
   *  However, R1 claims that should this mechanism be exploited, and thus the security of certificate storage can be compromised. This can potentially be done in various ways. For example, changing various parameters in the hook scripts (should the hook scripts be stored in a less than secure location, like /tmp), or changing directory permissions of the /etc/letsencrypt directory through a filesystem vulnerability 
   * Claim C1 refutes R1. Certbot has a command line parameter called "strict_permissions", which ensures that all configuration files inherit the permissions of the user issuing the Certbot command.  
  
-<br> EVIDENCE GOES HERE <br>
+!["Evidence 1"](https://cdn.discordapp.com/attachments/481986866162302976/500495729144496129/TopClaim3E1.PNG)
  
   * R2 shows how lax installation procedures when setting up initial storage locations could result in insecure certificate storage.  
   * However, C2 argues against R2, as the service accounts used to install Certbot should have sufficiently high permissions, as per best practices during Certbot's installation. 
   * R3 goes against C2. In Windows, an unquoted service path containing file or directory names with spaces could result in an attacker abusing filesystem vulnerabilities to compromise certificates. For example, if the icacls utility for Windows lists Certbot's executable as residing at `C:\Program Files\Certbot.exe` instead of `"C:\Program Files\Certbot.exe"`, then an attacker could drop a malicious executable in `C:\Program EvilDirectory\cerbot.exe`. If run with the same permissions as the legit Certbot executable - as would probably be the case if certificate revocation and renewal is done via an automated service, then this executable will be able to pull certificates from the "secure" storage location and send them to the attacker, hypothetically. 
   * Claim C3 argues against this. If proper installation instructions are followed, then Certbot should be installed in the `C:\inetpub\` directory, or a similar directory name without spaces in the name. This would prevent unquoted service path attacks using Certbot, even if the path is unquoted. 
          
-<br>EVIDENCE GOES HERE <br>
+!["Evidence 2"](https://cdn.discordapp.com/attachments/481986866162302976/500495738279690260/TopClaim3E2.PNG)
          
 -----------------------------------------------
 
