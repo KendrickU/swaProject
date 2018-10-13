@@ -7,7 +7,7 @@ The context for these assurance cases is that Certbot is being used by a bank to
 Below are three top level assurance claims with accompanying diagrams: 
 <br>
 
-* Certbot resists attacks to subvert the certificate acquisition process 
+* Certbot resists attacks to subvert the certificate acquisition process
 * Certbot prevents the unauthorized revocation of certificates 
 * Certbot storage mechanism prevents unauthorized disclosure
 
@@ -20,6 +20,11 @@ We have found that Certbot does not have enough features to properly cover 5 ass
 ----
 
 ## Certbot resists attacks to subvert the certificate acquisition process
+
+We chose our first claim, Certbot resists attacks to subvert the certificate acquisition process, 
+because it is one of the core functions of Certbot. Acquiring certificates that mitigate attacks are vital to
+systems such as bank systems because it ensures upmost security. It allows an extra layer of security which makes various
+entities believe that the Certbot system will work as expected.
 
 !["Diagram 1"](https://www.lucidchart.com/publicSegments/view/e3663a71-90b1-421d-8424-fe667a11c9ff/image.png)
  
@@ -55,6 +60,10 @@ the source repositories may be compromised through a well-targeted phishing atta
 
 ## Certbot prevents the unauthorized revocation of certificates
 
+Our second claim, Certbot prevents the unauthorized revocation of certificates, is important as it brings attention to the 
+detrimental effects of what could happen if a user is given unauthorized access to revoking certificates. This may include malicious users
+having the ability to revoke valid certificates and malicious users who refuse to revoke invalid certificates in order to try to trick the system into believing that these certificates are valid. Preventing the authority to revoke certificates becomes very important as the system's architecture is strengthened.
+
 !["Diagram 2"](https://www.lucidchart.com/publicSegments/view/cd5b6e10-743f-49c2-9a7f-f82f65ef04b1/image.png)
  
 * Top Claim C1 postulates that Certbot's certificate storage features prevent the unauthorized revocation of certificates. Certificates are stored  
@@ -75,6 +84,8 @@ the source repositories may be compromised through a well-targeted phishing atta
 
 ## Certbot certificate storage mechanism prevents unauthorized disclosure.
 
+The third claim, Certbot storage mechanism prevents unauthorized disclosure, is important as it shows that Certbot has functionality and control with how certificates are stored. A malicious user who has the ability to read certificates to modifying these certificates in an unauthorized manner weakens the assurance of the system. Certbot provides excellent assurance and it does the job it was designed well because it has a mechanism in place to securely store these certificates. 
+
 !["Diagram 3"](https://www.lucidchart.com/publicSegments/view/1a366405-1600-4faa-a0d6-2e83515bc756/image.png)       
  
 * Top Claim C1 claims that Certbot prevents unauthorized disclosure of certificates obtained from Let's Encrypt. By default, certificates are stored in the `/etc/letsencrypt/` directory on Linux systems, which is accessible only by root in most environments unless other users are given similar permissions for this directory. Modifying these permissions or locations can be done with "hook scripts", supplied as command line arguments when renewing or obtaining a certificate
@@ -93,7 +104,13 @@ the source repositories may be compromised through a well-targeted phishing atta
 -----------------------------------------------
 
 ## Certbot resists attacks to subvert certificate renewal processes  
------         
+-----
+
+We chose our fourth claim, Certbot resists attacks to subvert certificate renewal processes, 
+because it is one of the core functions of Certbot. Acquiring certificates that mitigate attacks are vital to
+systems such as bank systems because it ensures upmost security. Being able to renew the certificates are essential as it adds continuous assurance that
+the system will work as expected.
+
 This assurance case does not have an accompanying diagram. This is because this claim is largely similar to the first outlined assurance case concerning certificate revocation. At Certbot's core, a certificate can be stored, revoked, obtained, and renewed. The latter two functionalities are largely encompassed in the diagrams and claims shown, and as such the corresponding claims and rebuttals can be applied to them as well.  
 
 
