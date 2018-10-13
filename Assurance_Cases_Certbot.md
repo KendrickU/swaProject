@@ -78,7 +78,9 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
 ----------------------------------------------- 
 <br>
 
-## Certbot certificate storage mechanism prevents unauthorized disclosure.          
+## Certbot certificate storage mechanism prevents unauthorized disclosure.
+
+!["Diagram 3"](https://www.lucidchart.com/publicSegments/view/1a366405-1600-4faa-a0d6-2e83515bc756/image.png)       
  
 * Top Claim C1 claims that Certbot prevents unauthorized disclosure of certificates obtained from Let's Encrypt. By default, certificates are stored in the `/etc/letsencrypt/` directory on Linux systems, which is accessible only by root in most environments unless other users are given similar permissions for this directory. Modifying these permissions or locations can be done with "hook scripts", supplied as command line arguments when renewing or obtaining a certificate
   *  However, R1 claims that should this mechanism be exploited, and thus the security of certificate storage can be compromised. This can potentially be done in various ways. For example, changing various parameters in the hook scripts (should the hook scripts be stored in a less than secure location, like /tmp), or changing directory permissions of the /etc/letsencrypt directory through a filesystem vulnerability 
@@ -101,7 +103,6 @@ NO EVIDENCE CUZ OF BLACK DIAMOND OF UNCERTAINTY
 -----         
 This assurance case does not have an accompanying diagram. This is because this claim is largely similar to the first outlined assurance case concerning certificate revocation. At Cerbot's core, a certificate can be stored, revoked, obtained, and renewed. The latter two functionalities are largely encompassed in the diagrams and claims shown, and as such the corresponding claims and rebuttals can be applied to them as well.  
 
-!["Diagram 3"](https://www.lucidchart.com/publicSegments/view/1a366405-1600-4faa-a0d6-2e83515bc756/image.png)
 
 ## Github and Kanban 
 ----- 
