@@ -1,6 +1,125 @@
-<h1 style="color:black;font-family:verdana;font-size:300%">Designing for Software Security Engineering</h1>
+<h1 style="color:black;font-family:verdana;font-size:300%"><b>Designing for Software Security Engineering</b></h1>
 <br>
 
-<a target="_blank" rel="noopener noreferrer" href="InstallationThreatModel.htm" style=color:#000000;font-size:25px>Report 1</a><br>
-<a target="_blank" rel="noopener noreferrer" href="l1-expiration-report12.htm" style=color:#000000;font-size:25px>Report 2</a><br>
-<a target="_blank" rel="noopener noreferrer" href="level_1_certificate_creation_report.htm" style=color:#000000;font-size:25px>Report 3</a><br>
+<a target="_blank" rel="noopener noreferrer" href="InstallationThreatModel.htm" style=color:#000000;font-size:20px>Report 1</a><br>
+<a target="_blank" rel="noopener noreferrer" href="l1-expiration-report12.htm" style=color:#000000;font-size:20px>Report 2</a><br>
+<a target="_blank" rel="noopener noreferrer" href="level_1_certificate_creation_report.htm" style=color:#000000;font-size:20px>Report 3</a><br>
+
+<h2>Justification for Consolidation of Renewal and Creation of Certificates</h2>
+<p>The process for renewing a ticket is very similar to creating a ticket. Both of these start with a command to start the renewal process or the creation process. The only difference between these is when the renew process is called it checks the expiration date of the certificate being called for renewal. After that the process is very similar. No notable structural deficiencies.</p>
+<h3>STRIDE for obtaining certificates</h3>
+<ul>
+<li>External Interactor: SR</li>
+<li>Data store: TRI</li>
+<li>Processes: STRIE</li>
+<li>Data Flow: TI</li>
+</ul>
+<h4>Mitigation Techniques:</h4>
+<p>Ensure logging is enabled to ensure non-repudiation when Let&rsquo;s Encrypt fails to register attempts to obtain or revoke certificates Apply patches and updates to Certbot to reduce the likelihood of command execution, privilege escalation, and denial of service vulnerabilities being leveraged by attackers to disrupt certificate obtaining/revoking/renewal processes Ensure that filesystems are audited to reduce the likelihood of attackers abusing privilege escalation weaknesses to obtain certificates and/or compromise the Certbot executable.</p>
+<h4>Creation Process</h4>
+<p>An email and password is supplied to certbot to create an identity with Let&rsquo;s Encrypt. Session data is returned. A certificate request is issued from Certbot. Let&rsquo;s Encrypt then issues back a public key certificate and the requisite data which constitutes a certificate. This certificate is then saved to the file system, at which point it is able to prove the identity of a web server hosted on the filesystem.</p>
+<h4>Renewal Process</h4>
+<p>This is similar to initially obtaining a certificate, however no credentials need to be given. Instead, the certificate is specified on the command line with the &ldquo;certbot renew&rdquo; command. After the certificate is renewed, the certificate can once again be used to identify the web server. <br /> <br /> There are no identified structural deficiencies for the renewal or creation processes.</p>
+<h4>OSS Summary</h4>
+<p>Certbot development team never address any security threats or security flaws in their documentation or faq. Looking into the current issue for the renewal and creation of certificates. The issue that were actively being worked on discussed where mostly user problem and where just singular issue. There were several issue such as OSCP stapling being actively worked on that affected obscure corner cases in the community. Their were no major cases that affected the whole community.</p>
+<h4>Explanation of diagram for both expiration and revocation(L0)</h4>
+<p>The admin specifies a certificate to the process to see if it is expired or not. If it is then it goes to the revocation process otherwise it puts out a notification that it is still valid. Look below and at the generated report for security flaws and discussion. No notable structural deficiencies.</p>
+<h4>Explanation of diagram for both expiration and revocation(L1)</h4>
+<p>This is the revocation and expiration diagram. An admin logins in with login credentials and passes the authentication trust boundary which goes through the operating system&rsquo;s login process. Once logged in, the admin has control over the operating system. The admin can open up a command shell and run a command that access the certificate. It then gives it to Certbot which is handled by Let&rsquo;s Encrypt. Let&rsquo;s encrypt takes the certificate and validates if it is expired or not. If it is expired, it hands it over to revocation which will render the certificate useless and then sends back a message saying that the certificate has been revoked. If the certificate is valid then it will notify the system. Look below and at the generated report for security flaws and discussion. No notable structural deficiencies besides certbot process is missing before it reaches let&rsquo;s encrypt. It is supposed to send over the certificate to Let&rsquo;s Encrypt external interactor.</p>
+<h4>Justification for only one diagram (L0/L1) for expiration and revocation threat models</h4>
+<p>Expiration and Revocation are part of the same diagram because they are very similar to each other in the aspect that expiration is a subset of a revocation. So there is only one diagram for their respective threat models.</p>
+<h4>STRIDE</h4>
+<ul>
+<li>External interactor: SR</li>
+<li>Process: STRI</li>
+<li>Data Store: STRI</li>
+<li>Data Flow: TI</li>
+</ul>
+<h4>Mitigation Techniques</h4>
+<h4>Expiration</h4>
+<ul>
+<li>Spoofing - OCSP Stapling</li>
+<li>Tampering - Proper Permission Handling</li>
+<li>Repudiation - Certbot has logging, authentication mechanism</li>
+<li>nformation Disclosure - Proper Permission Handling, Secure SSL Communication Traffic</li>
+<li>Denial of Service - N/A</li>
+<li>Elevation of Privilege - N/A Only Admins can use certbot manually</li>
+</ul>
+<h4>Revoke</h4>
+<ul>
+<li>Spoofing - OCSP Stapling</li>
+<li>Tampering - Proper Permission Handling</li>
+<li>Repudiation - Certbot has logging, authentication mechanism</li>
+<li>Information Disclosure - Proper Permission Handling, Secure SSL Communication Traffic</li>
+<li>Denial of Service - N/A</li>
+<li>Elevation of Privilege - N/A Only Admins can use certbot manually</li>
+</ul>
+<p>Perform analysis on your code base to align the diagram with reality</p>
+<h4>Expiration</h4>
+<p>Change default privkey permissions while preserving group permissions #6480 An attacker may be able to get into the filesystem and read the privkey. This makes the filesystem vulnerable across all threat models. A lot of the threat models came back with attackers sniffing the certificates or other content at the filesystem level. When priv-keys are generated, the file permissions were changing. This would not be good for Certbot&rsquo;s file system as it needs a way to preserve the permissions after these privkeys are generated. An attacker could use this to their advantage as the permissions would be altered on the privkey files. They could lay their attack after accessing the filesystem where the certificates are stored and read the privkey files and might be able to choose to act upon the filesystem with this information. Permission 0644 instead of 0600 gives read access to the files which are not good. The operating system is as vulnerable as any other operating system. It uses file permissions to ensure security. If this is compromised then an attacker can do substantial damage.</p>
+<h4>Revoke</h4>
+<p>Certbot revoke gets confused by staging certificates #3922 When the user has made certs with --test-cert (aka --staging), and tries to revoke them, certbot revoke isn't smart enough to figure out where the revocation request should go This is very relevant to the expiration/revocation threat models as it breaks the revocation of certificates process which leaves the system vulnerable as some certificates cannot be revoked. An disgruntled attacker can use this to their advantage as they can use a certificate that has not been able to be revoked. Certbot unexpectedly removed live certificate while revoking the old one #5499 Certbot has a bug that will unexpectedly remove a live certificate as it revokes the old one due to not knowing the difference between them. This is a problem the revocation threat model addresses as a live certificate with the same name as an old certificate may be removed or revoked unwillingly. This means that the whole revoking process is messed up. It doesn&rsquo;t do anything with an attacker attacking the system as it is more of a threat that the revoking process won&rsquo;t work as expected. Revocation and the renewer #1028 <br /> &ldquo;Related to #688, there is logic in storage.py to renew a certificate if it has been revoked according to OCSP. There are a number of problems with this: <br /> The ocsp_revoked function always returns False and just has a XXX comment that this function needs to be written. If automatic deployment is enabled and the currently deployed version is revoked, shouldn't the renewer also deploy a new, unrevoked version if one exists? There is no logic for this.&rdquo; <br /> If OCSP stapling doesn&rsquo;t work properly then an attacker can listen for the CA handshake which is not good and leaves the system vulnerable.</p>
+<h4>OSS Summary</h4>
+<p>Certbot rarely mentions security related issues in their documentation, but expiration and revocation are very important aspects to the Certbot system. Certbot being an open source project, it has its security holes in it. As stated, OCSP Stapling has its issues which can be attacked by CA handshake watching. When permissions aren&rsquo;t set up properly there will be unwanted access to certificates and other files on the file system. With revoking not working properly, the system is left very vulnerable as a key aspect of the system is broken. This is a major threat to the system. In conclusion, these issues with the software hurts the overall security aspects of the Certbot system as it is not able to function properly.</p>
+<h4>Explanation of Installing Certbot Threat Model Diagram (L0)</h4>
+<p>We assume that there is an admin that has already accessed the application, Git Bash. This is a structural deficiency but we already assume that this has happened so we left it out. It then clones the diagram, downloads, and then installs the software. It then goes back to certbot and then goes to the Let&rsquo;s Encrypt server to do what it needs to do.</p>
+<h4>Explanation of Installing Certbot Threat Model Diagram (L1)</h4>
+<p>This diagram starts off at the filesystem as we assumed the admin has logged in. The flow then goes to grab the clone from github&rsquo;s cdn. It then gives a file location over to the cdn network and access the code storage area to grab what is needed for download and then install. It then goes all the way back to file system and it installs properly. After this, it goes to the shell and accesses the Let&rsquo;s Encrypt Server and then stores the credentials needed for the database and takes the information as needed from the database.</p>
+<h4>STRIDE</h4>
+<ul>
+<li>External interactor: SR</li>
+<li>Process: STRI</li>
+<li>Data Store: STRI</li>
+<li>Data Flow: TI</li>
+</ul>
+<h4>Mitigation Techniques</h4>
+<h4>Expiration</h4>
+<ul>
+<li>Spoofing - OCSP Stapling</li>
+<li>Tampering - Proper Permission Handling</li>
+<li>Repudiation - Certbot has logging, authentication mechanism</li>
+<li>Information Disclosure - Proper Permission Handling, Secure SSL Communication Traffic</li>
+<li>Denial of Service - N/A</li>
+<li>Elevation of Privilege - N/A Only Admins can use certbot manually</li>
+</ul>
+<h4>Revoke</h4>
+<ul>
+<li>Spoofing - OCSP Stapling</li>
+<li>Tampering - Proper Permission Handling</li>
+<li>Repudiation - Certbot has logging, authentication mechanism</li>
+<li>Information Disclosure - Proper Permission Handling, Secure SSL Communication Traffic</li>
+<li>Denial of Service - N/A</li>
+<li>Elevation of Privilege - N/A Only Admins can use certbot manually</li>
+</ul>
+
+
+<h4>Installation Process</h4>
+<p>Update repositories with:</p>
+
+<li>sudo apt-get update</li>
+<p>Add the official Cerbot PPA to sources:</p>
+
+<li>sudo add-apt-repository ppa:certbot/certbot</li>
+<p>Then, install the python-certbot-apache package:</p>
+
+<li>sudo apt-get install python-certbot-apache</li>
+
+<h4>STRIDE</h4>
+</li>
+<li>External interactor: SR</li>
+<li>Process: STRI</li>
+<li>Data Store: STRI</li>
+<li>Data Flow: TI</li>
+
+
+<h4>Mitigation Techniques</h4>
+
+<li>Spoofing - OCSP Stapling</li>
+<li>Tampering - Proper Permission Handling</li>
+<li>Repudiation - Certbot has logging, authentication mechanism</li>
+<li>Information Disclosure - Proper Permission Handling, Secure SSL Communication Traffic</li>
+<li>Denial of Service - N/A</li>
+<li>Elevation of Privilege - N/A Only Admins can use certbot manually</li>
+
+<h4>OSS Summary</h4>
+<p>Certbot development team never address any security threats or security flaws in their documentation or faq. Their were some issue with the installation process in the community issue on github. The issue that were actively being worked on discussed where mostly user problem and where just singular issue. There were several issue being actively worked on that affected obscure cases in the community. Their were no major cases that affected the whole community. All of the security issue that have been found have been resolved for the issues.</p>
