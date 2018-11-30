@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AnalyzerReport package_version="1.0" assessment_start_ts="1543355593.2962427" tool_version="1.3.0" parser_fw_version="3.1.8" package_root_dir="pkg1" uuid="d84d6fcc-5581-4a35-a989-ab3f3d8cab30" package_name="CertBot" build_root_dir="/home/builder/build" tool_name="bandit" parser_fw="resultparser" platform_name="ubuntu-16.04-64">
+  <BugInstance id="0">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/challenges_test.py</SourceFile>
+        <StartLine>49</StartLine>
+        <EndLine>49</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="1">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/challenges_test.py</SourceFile>
+        <StartLine>375</StartLine>
+        <EndLine>375</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="2">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>196</StartLine>
+        <EndLine>196</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="3">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>287</StartLine>
+        <EndLine>290</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="4">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>331</StartLine>
+        <EndLine>331</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="5">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>366</StartLine>
+        <EndLine>366</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="6">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>421</StartLine>
+        <EndLine>421</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="7">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/client.py</SourceFile>
+        <StartLine>932</StartLine>
+        <EndLine>932</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="8">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/crypto_util.py</SourceFile>
+        <StartLine>261</StartLine>
+        <EndLine>261</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="9">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/jws_test.py</SourceFile>
+        <StartLine>21</StartLine>
+        <EndLine>21</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="10">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/jws_test.py</SourceFile>
+        <StartLine>23</StartLine>
+        <EndLine>23</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="11">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/messages.py</SourceFile>
+        <StartLine>208</StartLine>
+        <EndLine>208</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="12">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/standalone_test.py</SourceFile>
+        <StartLine>91</StartLine>
+        <EndLine>91</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>request_with_no_cert_validation</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Requests call with verify=False disabling SSL certificate checks, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="13">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/standalone_test.py</SourceFile>
+        <StartLine>98</StartLine>
+        <EndLine>98</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>request_with_no_cert_validation</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Requests call with verify=False disabling SSL certificate checks, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="14">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/standalone_test.py</SourceFile>
+        <StartLine>221</StartLine>
+        <EndLine>221</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>request_with_no_cert_validation</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Requests call with verify=False disabling SSL certificate checks, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="15">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/acme/acme/standalone_test.py</SourceFile>
+        <StartLine>228</StartLine>
+        <EndLine>228</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>request_with_no_cert_validation</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>Requests call with verify=False disabling SSL certificate checks, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="16">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-apache/certbot_apache/configurator.py</SourceFile>
+        <StartLine>734</StartLine>
+        <EndLine>734</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="17">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-apache/certbot_apache/http_01.py</SourceFile>
+        <StartLine>143</StartLine>
+        <EndLine>143</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>set_bad_file_permissions</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Chmod setting a permissive mask 0o755 on file (NOT PARSED).</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="18">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-apache/certbot_apache/parser.py</SourceFile>
+        <StartLine>7</StartLine>
+        <EndLine>7</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="19">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-apache/certbot_apache/parser.py</SourceFile>
+        <StartLine>220</StartLine>
+        <EndLine>224</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="20">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-compatibility-test/certbot_compatibility_test/configurators/apache/common.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>5</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="21">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-compatibility-test/certbot_compatibility_test/configurators/apache/common.py</SourceFile>
+        <StartLine>48</StartLine>
+        <EndLine>48</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="22">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-compatibility-test/certbot_compatibility_test/configurators/nginx/common.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>5</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="23">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-compatibility-test/certbot_compatibility_test/configurators/nginx/common.py</SourceFile>
+        <StartLine>41</StartLine>
+        <EndLine>41</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="24">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-dns-google/docs/_ext/jsonlexer.py</SourceFile>
+        <StartLine>13</StartLine>
+        <EndLine>13</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="25">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/configurator.py</SourceFile>
+        <StartLine>6</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="26">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/configurator.py</SourceFile>
+        <StartLine>923</StartLine>
+        <EndLine>927</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="27">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/configurator.py</SourceFile>
+        <StartLine>1126</StartLine>
+        <EndLine>1126</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="28">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/configurator.py</SourceFile>
+        <StartLine>1135</StartLine>
+        <EndLine>1136</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="29">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/obj.py</SourceFile>
+        <StartLine>36</StartLine>
+        <EndLine>36</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_bind_all_interfaces</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Possible binding to all interfaces.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="30">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-nginx/certbot_nginx/parser.py</SourceFile>
+        <StartLine>185</StartLine>
+        <EndLine>185</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="31">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-postfix/certbot_postfix/util.py</SourceFile>
+        <StartLine>4</StartLine>
+        <EndLine>5</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="32">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot-postfix/certbot_postfix/util.py</SourceFile>
+        <StartLine>173</StartLine>
+        <EndLine>173</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="33">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/account.py</SourceFile>
+        <StartLine>62</StartLine>
+        <EndLine>65</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Use of insecure MD2, MD4, or MD5 hash function.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="34">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/auth_handler.py</SourceFile>
+        <StartLine>138</StartLine>
+        <EndLine>139</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="35">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/cli.py</SourceFile>
+        <StartLine>738</StartLine>
+        <EndLine>738</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="36">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/crypto_util.py</SourceFile>
+        <StartLine>189</StartLine>
+        <EndLine>189</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="37">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/display/util.py</SourceFile>
+        <StartLine>450</StartLine>
+        <EndLine>450</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="38">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/errors.py</SourceFile>
+        <StartLine>54</StartLine>
+        <EndLine>54</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="39">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/hooks.py</SourceFile>
+        <StartLine>7</StartLine>
+        <EndLine>8</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with Popen module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="40">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/hooks.py</SourceFile>
+        <StartLine>243</StartLine>
+        <EndLine>244</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="41">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/log.py</SourceFile>
+        <StartLine>101</StartLine>
+        <EndLine>102</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="42">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/log.py</SourceFile>
+        <StartLine>322</StartLine>
+        <EndLine>322</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="43">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>61</StartLine>
+        <EndLine>61</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="44">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>82</StartLine>
+        <EndLine>82</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="45">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>121</StartLine>
+        <EndLine>121</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="46">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>230</StartLine>
+        <EndLine>230</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="47">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>454</StartLine>
+        <EndLine>455</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="48">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>563</StartLine>
+        <EndLine>564</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="49">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>734</StartLine>
+        <EndLine>735</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="50">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/main.py</SourceFile>
+        <StartLine>1254</StartLine>
+        <EndLine>1254</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Standard pseudo-random generators are not suitable for security/cryptographic purposes.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="51">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/notify.py</SourceFile>
+        <StartLine>6</StartLine>
+        <EndLine>8</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="52">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/notify.py</SourceFile>
+        <StartLine>29</StartLine>
+        <EndLine>30</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="53">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/ocsp.py</SourceFile>
+        <StartLine>5</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with Popen module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="54">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/ocsp.py</SourceFile>
+        <StartLine>24</StartLine>
+        <EndLine>25</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="55">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/ocsp.py</SourceFile>
+        <StartLine>24</StartLine>
+        <EndLine>25</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="56">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco.py</SourceFile>
+        <StartLine>108</StartLine>
+        <EndLine>108</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="57">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco.py</SourceFile>
+        <StartLine>129</StartLine>
+        <EndLine>129</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="58">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco.py</SourceFile>
+        <StartLine>207</StartLine>
+        <EndLine>209</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="59">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco.py</SourceFile>
+        <StartLine>275</StartLine>
+        <EndLine>275</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="60">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco_test.py</SourceFile>
+        <StartLine>127</StartLine>
+        <EndLine>127</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="61">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/disco_test.py</SourceFile>
+        <StartLine>128</StartLine>
+        <EndLine>128</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="62">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/manual.py</SourceFile>
+        <StartLine>221</StartLine>
+        <EndLine>221</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="63">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/standalone.py</SourceFile>
+        <StartLine>65</StartLine>
+        <EndLine>65</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="64">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/standalone_test.py</SourceFile>
+        <StartLine>69</StartLine>
+        <EndLine>69</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="65">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/standalone_test.py</SourceFile>
+        <StartLine>105</StartLine>
+        <EndLine>105</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="66">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/storage_test.py</SourceFile>
+        <StartLine>65</StartLine>
+        <EndLine>65</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="67">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/util_test.py</SourceFile>
+        <StartLine>30</StartLine>
+        <EndLine>30</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="68">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/util_test.py</SourceFile>
+        <StartLine>36</StartLine>
+        <EndLine>36</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>hardcoded_tmp_directory</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Probable insecure usage of temp file/directory.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="69">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/plugins/webroot.py</SourceFile>
+        <StartLine>104</StartLine>
+        <EndLine>104</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="70">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/renewal.py</SourceFile>
+        <StartLine>157</StartLine>
+        <EndLine>157</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Use of possibly insecure function - consider using safer ast.literal_eval.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="71">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/reporter.py</SourceFile>
+        <StartLine>53</StartLine>
+        <EndLine>53</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>assert_used</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="72">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>15</StartLine>
+        <EndLine>15</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="73">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>69</StartLine>
+        <EndLine>72</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="74">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>439</StartLine>
+        <EndLine>442</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="75">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>445</StartLine>
+        <EndLine>448</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="76">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>445</StartLine>
+        <EndLine>448</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="77">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/certbot/util.py</SourceFile>
+        <StartLine>588</StartLine>
+        <EndLine>588</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="78">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/fetch.py</SourceFile>
+        <StartLine>22</StartLine>
+        <EndLine>22</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with check_call module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="79">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/fetch.py</SourceFile>
+        <StartLine>111</StartLine>
+        <EndLine>117</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="80">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/fetch.py</SourceFile>
+        <StartLine>111</StartLine>
+        <EndLine>117</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="81">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>29</StartLine>
+        <EndLine>29</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with check_output module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="82">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>31</StartLine>
+        <EndLine>32</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with CalledProcessError module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="83">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>37</StartLine>
+        <EndLine>37</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="84">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>149</StartLine>
+        <EndLine>149</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="85">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>149</StartLine>
+        <EndLine>149</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="86">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letsencrypt-auto-source/pieces/pipstrap.py</SourceFile>
+        <StartLine>167</StartLine>
+        <EndLine>167</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="87">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>11</StartLine>
+        <EndLine>11</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="88">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>149</StartLine>
+        <EndLine>151</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="89">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>149</StartLine>
+        <EndLine>151</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="90">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>187</StartLine>
+        <EndLine>189</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="91">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>193</StartLine>
+        <EndLine>196</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="92">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>200</StartLine>
+        <EndLine>203</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="93">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>218</StartLine>
+        <EndLine>220</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="94">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache.py</SourceFile>
+        <StartLine>238</StartLine>
+        <EndLine>240</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="95">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/letshelp-certbot/letshelp_certbot/apache_test.py</SourceFile>
+        <StartLine>6</StartLine>
+        <EndLine>6</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="96">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>19</StartLine>
+        <EndLine>19</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="97">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>58</StartLine>
+        <EndLine>59</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="98">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>61</StartLine>
+        <EndLine>63</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="99">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>64</StartLine>
+        <EndLine>64</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="100">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>70</StartLine>
+        <EndLine>71</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="101">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>70</StartLine>
+        <EndLine>71</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="102">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>73</StartLine>
+        <EndLine>75</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>start_process_with_partial_path</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Starting a process with a partial executable path</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="103">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>73</StartLine>
+        <EndLine>75</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="104">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>76</StartLine>
+        <EndLine>76</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="105">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>107</StartLine>
+        <EndLine>107</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="106">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>158</StartLine>
+        <EndLine>158</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>any_other_function_with_shell_equals_true</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Function call with shell=True parameter identified, possible security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="107">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>160</StartLine>
+        <EndLine>160</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>any_other_function_with_shell_equals_true</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Function call with shell=True parameter identified, possible security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="108">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/_venv_common.py</SourceFile>
+        <StartLine>162</StartLine>
+        <EndLine>162</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>any_other_function_with_shell_equals_true</BugCode>
+    <BugSeverity>MEDIUM</BugSeverity>
+    <BugMessage>Function call with shell=True parameter identified, possible security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="109">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/install_and_test.py</SourceFile>
+        <StartLine>14</StartLine>
+        <EndLine>14</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="110">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/install_and_test.py</SourceFile>
+        <StartLine>22</StartLine>
+        <EndLine>22</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="111">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/pip_install.py</SourceFile>
+        <StartLine>13</StartLine>
+        <EndLine>13</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="112">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tools/pip_install.py</SourceFile>
+        <StartLine>67</StartLine>
+        <EndLine>67</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_popen_with_shell_equals_true</BugCode>
+    <BugSeverity>HIGH</BugSeverity>
+    <BugMessage>subprocess call with shell=True identified, security issue.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="113">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tox.cover.py</SourceFile>
+        <StartLine>3</StartLine>
+        <EndLine>3</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>blacklist</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Consider possible security implications associated with subprocess module.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="114">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tox.cover.py</SourceFile>
+        <StartLine>51</StartLine>
+        <EndLine>53</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="115">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tox.cover.py</SourceFile>
+        <StartLine>54</StartLine>
+        <EndLine>56</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>subprocess_without_shell_equals_true</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>subprocess call - check for execution of untrusted input.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugInstance id="116">
+    <Methods></Methods>
+    <BugLocations>
+      <Location id="1" primary="true">
+        <SourceFile>pkg1/certbot/tox.cover.py</SourceFile>
+        <StartLine>75</StartLine>
+        <EndLine>75</EndLine>
+      </Location>
+    </BugLocations>
+    <BugCode>try_except_pass</BugCode>
+    <BugSeverity>LOW</BugSeverity>
+    <BugMessage>Try, Except, Pass detected.</BugMessage>
+    <BugTrace>
+      <BuildId>1</BuildId>
+      <AssessmentReportFile>assessment_report1.json</AssessmentReportFile>
+    </BugTrace>
+  </BugInstance>
+  <BugSummary>
+    <BugCategory group="UNKOWN" code="any_other_function_with_shell_equals_true" count="3" bytes="1914" />
+    <BugCategory group="UNKOWN" code="assert_used" count="33" bytes="20573" />
+    <BugCategory group="UNKOWN" code="blacklist" count="21" bytes="12792" />
+    <BugCategory group="UNKOWN" code="hardcoded_bind_all_interfaces" count="1" bytes="595" />
+    <BugCategory group="UNKOWN" code="hardcoded_tmp_directory" count="3" bytes="1788" />
+    <BugCategory group="UNKOWN" code="request_with_no_cert_validation" count="4" bytes="2544" />
+    <BugCategory group="UNKOWN" code="set_bad_file_permissions" count="1" bytes="622" />
+    <BugCategory group="UNKOWN" code="start_process_with_partial_path" count="7" bytes="4224" />
+    <BugCategory group="UNKOWN" code="subprocess_popen_with_shell_equals_true" count="4" bytes="2481" />
+    <BugCategory group="UNKOWN" code="subprocess_without_shell_equals_true" count="28" bytes="17438" />
+    <BugCategory group="UNKOWN" code="try_except_pass" count="12" bytes="6750" />
+  </BugSummary>
+</AnalyzerReport>
