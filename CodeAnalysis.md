@@ -131,22 +131,24 @@ The file picked is certbot/certbot/crypto_util.py because it is the utility file
 #### CWE-311: Missing Encryption of Sensitive Data
 
 Line 106 - 240
-```python
+``` python
 # WARNING: the csr and private key file are possible attack vectors for TOCTOU
 # We should either...
 # A. Do more checks to verify that the CSR is trusted/valid
-# B. Audit the parsing code for vulnerabilities```
+# B. Audit the parsing code for vulnerabilities
+```
 
 The above are comments found in this file. As stated these csr and private key files are possible attack vectors for TOCTOU which leaves the system very vulnerable. Not all sensitive data is being encrypted properly. We should investigate this more and see what vulnerabilities we can come up with.
 
 #### CWE-367: Time-of-Check Time-Of-Use (TOCTOU) Race Condition
 
 Line 106 - 240
-```python
+``` python
 # WARNING: the csr and private key file are possible attack vectors for TOCTOU
 # We should either...
 # A. Do more checks to verify that the CSR is trusted/valid
-# B. Audit the parsing code for vulnerabilities```
+# B. Audit the parsing code for vulnerabilities
+```
 
 Certbot is actually vulnerable to TOCTOU attacks as the comments hint at above. This CWE actually applies to this method of checking the csr and private key file. As of right now, Certbot is working on a fix themselves. Very interesting find. Definitely looking at changing the parsing code could fix this weakness.
 
