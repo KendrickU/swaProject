@@ -36,7 +36,7 @@ certbot-dns-linode/certbot_dns_linode/dns_lonide.py<br>
 
 ## DHS SWAMP:<br>
 
-In flake8certbot.xml (REPORT)<br><br>
+In [flake8certbot.xml](https://github.com/KendrickU/swaProject/blob/master/xmlFiles/Flake8CertBot.xml)<br><br>
 These important statements are dead code. CWE-561.
 
 Link to pull requests:
@@ -49,7 +49,7 @@ Link to pull requests:
 
 <b> https://github.com/certbot/certbot/pull/6546 </b>
 
-In Banditcertbot.xml (REPORT)<br><br>
+In [Banditcertbot.xml](https://github.com/KendrickU/swaProject/blob/master/xmlFiles/BanditCertBot.xml)<br><br>
 Can’t figure out what CWE shell=True would link to. It should usually be shell=False<br>
 * Bug Instance ID 19: Use of Shell=True in process open call<br>
   * An attempt was made to leverage the instances of the “shell=True” parameters assigned to the Popen() call on line 243 in certbot/hooks.py for command execution. Assigning shell=True for subprocess, Popen, etc in Python is usually avoided due to the risk of allowing arbitrary code execution ( see https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess). Manual testing of certbot with the “--manual” flag (for an interactive shell) was conducted in an attempt to leverage semicolons, carriage returns, and similar delimiters to invoke arbitrary command execution, but this could not be achieved. This parameter was likely put in place to allow for various command line functionalities like piping to files, etc to be possible, and thus these instances of “shell=True” may be warranted.
