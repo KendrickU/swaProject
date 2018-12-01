@@ -2,7 +2,7 @@
 
 # <b>Automated Testing Analysis Tools</b>
 
-We used <b>Pylint</b>, <b>DHS Swamp</b>, and <b>Sonar-Python</b> as our automated testing static analysis tools. We found that their uses were to remove unnecessary spacing and empty line removals. DHS Swamp was able to tell us that import statements were unused which we then went through each one and confirmed that they are indeed unused.
+We used <b>Pylint</b>, and <b>DHS Swamp</b> as our automated testing static analysis tools. We found that their uses were to remove unnecessary spacing and empty line removals. DHS Swamp was able to tell us that import statements were unused which we then went through each one and confirmed that they are indeed unused.
 
 ## Pylint
 Automated tool but went through every individual file then documented:
