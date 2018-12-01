@@ -149,7 +149,7 @@ Line 106 - 240
 # B. Audit the parsing code for vulnerabilities
 ```
 
-Certbot is actually vulnerable to TOCTOU attacks as the comments hint at above. This CWE actually applies to this method of checking the csr and private key file. As of right now, Certbot is working on a fix themselves. Very interesting find. Definitely looking at changing the parsing code could fix this weakness.
+Certbot is vulnerable to TOCTOU attacks as the comments hint at above. This CWE actually applies to this method of checking the csr and private key file. As of right now, Certbot is working on a fix themselves. Very interesting find. Definitely looking at changing the parsing code could fix this weakness. It may be fixable by throwing in a try execept clause around line 106 and line 240.
 
 #### CWE-398 Code quality
 
@@ -157,7 +157,7 @@ As stated before with another file, this code quality is very subjective because
 
 #### CWE-561: Dead Code
 
-This CWE was tested against and put this CWE in here in the rare off chance that I would see it in there. All code works as intended and has a purpose. No code is presents that doesn’t have a purpose.
+This CWE was tested against and put this CWE in here in the rare off chance that I would see it in there. All code works as intended and has a purpose. No code is present that doesn’t have a purpose.
 
 
 #### CWE-916: Use of Password Hash with Insufficient Computational Effort
