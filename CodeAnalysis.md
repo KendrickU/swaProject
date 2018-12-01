@@ -39,14 +39,13 @@ certbot-dns-linode/certbot_dns_linode/dns_lonide.py<br>
 In [flake8certbot.xml](https://github.com/KendrickU/swaProject/blob/master/xmlFiles/Flake8CertBot.xml)<br><br>
 These important statements are dead code. CWE-561.
 
-Link to pull requests:
-
 * Bug Instance ID 271: import ‘sys’ but not used
 * Bug Instance ID 3142: import ‘sys’ but not used
 *	Bug Instance ID 3300: import ‘sys’ but not used
 *	Bug Instance ID 3406: import ‘sys’ but not used
 *	Bug Instance ID 1049: import ‘shlex’ but not used (Not included in pull request)
 
+<b>Link to pull requests:</b>
 <b> https://github.com/certbot/certbot/pull/6546 </b>
 
 In [Banditcertbot.xml](https://github.com/KendrickU/swaProject/blob/master/xmlFiles/BanditCertBot.xml)<br><br>
@@ -104,7 +103,7 @@ CWE-916: Use of Password Hash with Insufficient Computational Effort<br>
 
 --------------------------------------------------------------------------------------------------------------------------------
 
-We picked 4 out of a list of 25 CWEs we created that pertain to Certbot and checked to see if these CWEs
+We picked 4 out of a list of 25 CWEs we created that pertain to Certbot and checked to see if these CWEs could be found and/or tested against a few select files that we picked. These are time-consuming manual tests that yielded positive results as we found an attack vector in the code. 
 
 The file picked is certbot/certbot/util.py because it is the utility file for all of Certbot.
 
